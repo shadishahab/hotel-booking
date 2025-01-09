@@ -19,10 +19,10 @@ class Person(models.Model):
         (MALE, "Male"),
         (FEMALE, "Female")
     )
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     gender = models.PositiveSmallIntegerField(blank=True, null=True, choices=GENDER_FIELD)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     birth_date = models.DateField()
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Person'
