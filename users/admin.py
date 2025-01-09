@@ -9,7 +9,7 @@ class CustomUserAdmin(UserAdmin):
     list_display_links = ['id', 'username']
 
 
-class PersonAdmin(UserAdmin):
+class PersonAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'gender','phone_number', 'birth_date',]
     list_display_links = ['id', 'user']
 
