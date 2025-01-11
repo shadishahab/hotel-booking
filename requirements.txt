@@ -2,6 +2,7 @@ asgiref==3.8.1
 Django==5.1
 djangorestframework==3.15.2
 djangorestframework-simplejwt==5.3.1
+drf-yasg==1.21.8
 psycopg2==2.9.10
 python-decouple==3.8
 sqlparse==0.5.1
