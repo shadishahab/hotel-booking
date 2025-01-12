@@ -29,7 +29,7 @@ class Room(models.Model):
 class Reservation(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name="reservations")
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name="reservations")
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="reservations")
     start_at = models.DateField()
     end_at = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)

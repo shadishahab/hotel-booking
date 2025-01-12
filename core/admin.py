@@ -14,8 +14,8 @@ class RoomAdmin(admin.ModelAdmin):
 
 
 class ReservationAdmin(admin.ModelAdmin):
-    list_display = ['id', 'person', 'hotel','room', 'start_at', 'end_at', 'status', 'created_at', 'updated_at']
-    list_filter = ['person', 'hotel', 'room', 'status']
+    list_display = ['id', 'person', 'hotel','room', 'start_at', 'end_at', 'created_at', 'updated_at']
+    list_filter = ['person', 'hotel', 'room']
 
 
 admin.site.register(Reservation, ReservationAdmin)
