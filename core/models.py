@@ -27,19 +27,11 @@ class Room(models.Model):
 
 
 class Reservation(models.Model):
-    CONFIRMED = 1
-    CANCELED = 2
-
-    STATUS_FIELD = (
-        (CONFIRMED, "Confirmed"),
-        (CANCELED, "Canceled")
-    )
     person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name="reservations")
     hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name="reservations")
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     start_at = models.DateField()
     end_at = models.DateField()
-    status = models.PositiveSmallIntegerField(blank=True, null=True, choices=STATUS_FIELD)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
